@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleZone | Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="#home" class="logo">STYLE<span>ZONE</span></a>
+
+    <button class="menu-button" id="menuButton">☰</button>
+
+    <nav class="navigation" id="navigation">
+      <a href="#home">HOME</a>
+      <a href="#categories">CATEGORIES</a>
+      <a href="#products">PRODUCTS</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="search-box">
+        <span>⌕</span>
+        <input type="text" id="searchInput" placeholder="Search products">
+      </div>
+
+      <button class="small-button" id="profileButton">♙</button>
+
+      <button class="small-button wishlist-button" id="wishlistButton">
+        ♡ <span id="wishlistCount">0</span>
+      </button>
+
+      <button class="small-button bag-button" id="bagButton">
+        🛍 <span id="bagCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=85" alt="Fashion shopping">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p>THE NEW COLLECTION</p>
+      <h1>FASHION FOR<br>EVERY DAY</h1>
+      <h2>UP TO 60% OFF</h2>
+      <a href="#products" class="main-button">SHOP NOW →</a>
+    </div>
+  </section>
+
+  <section class="offer-strip">
+    <strong>BIG FASHION SALE</strong>
+    <span>•</span>
+    <span>Fresh styles for college, work and weekends</span>
+    <strong>FREE DELIVERY ABOVE ₹999</strong>
+  </section>
+
+  <section class="section" id="categories">
+    <h2 class="section-title">SHOP BY CATEGORY</h2>
+
+    <div class="category-grid">
+      <button class="category-card" data-category="men">
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=500&q=80" alt="Men">
+        <span>MEN</span>
+      </button>
+
+      <button class="category-card" data-category="women">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" alt="Women">
+        <span>WOMEN</span>
+      </button>
+
+      <button class="category-card" data-category="footwear">
+        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=500&q=80" alt="Footwear">
+        <span>FOOTWEAR</span>
+      </button>
+
+      <button class="category-card" data-category="accessories">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Accessories">
+        <span>ACCESSORIES</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="section products-section" id="products">
+    <div class="products-header">
+      <div>
+        <p class="small-heading">LATEST ARRIVALS</p>
+        <h2 class="section-title left-title">TRENDING PRODUCTS</h2>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="men">Men</button>
+        <button class="filter" data-filter="women">Women</button>
+        <button class="filter" data-filter="footwear">Footwear</button>
+        <button class="filter" data-filter="accessories">Accessories</button>
+      </div>
+    </div>
+
+    <p id="resultText" class="result-text"></p>
+
+    <div class="product-grid">
+
+      <article class="product-card" data-category="men" data-name="blue casual shirt men">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=600&q=80" alt="Blue casual shirt">
+          <button class="heart-button">♡</button>
+          <span class="product-label">NEW</span>
+        </div>
+        <div class="product-info">
+          <h3>Urban Street</h3>
+          <p>Men's Blue Casual Shirt</p>
+          <strong>₹899</strong> <del>₹1,799</del>
+          <span class="discount">50% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="women" data-name="pink summer dress women">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80" alt="Pink dress">
+          <button class="heart-button">♡</button>
+          <span class="product-label">POPULAR</span>
+        </div>
+        <div class="product-info">
+          <h3>Fashion Bloom</h3>
+          <p>Women's Summer Dress</p>
+          <strong>₹1,299</strong> <del>₹2,499</del>
+          <span class="discount">48% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="footwear" data-name="white sneakers footwear shoes">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="White sneakers">
+          <button class="heart-button">♡</button>
+          <span class="product-label">SALE</span>
+        </div>
+        <div class="product-info">
+          <h3>Move On</h3>
+          <p>Unisex Everyday Sneakers</p>
+          <strong>₹1,499</strong> <del>₹2,999</del>
+          <span class="discount">50% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="accessories" data-name="brown handbag accessories bag">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" alt="Handbag">
+          <button class="heart-button">♡</button>
+          <span class="product-label">NEW</span>
+        </div>
+        <div class="product-info">
+          <h3>Carry Style</h3>
+          <p>Classic Brown Handbag</p>
+          <strong>₹1,099</strong> <del>₹1,899</del>
+          <span class="discount">42% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="men" data-name="black t shirt men tshirt">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Black t-shirt">
+          <button class="heart-button">♡</button>
+        </div>
+        <div class="product-info">
+          <h3>Road Ready</h3>
+          <p>Men's Solid T-Shirt</p>
+          <strong>₹499</strong> <del>₹999</del>
+          <span class="discount">50% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="women" data-name="yellow ethnic kurta women">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=600&q=80" alt="Yellow kurta">
+          <button class="heart-button">♡</button>
+        </div>
+        <div class="product-info">
+          <h3>Ethnic Aura</h3>
+          <p>Women's Printed Kurta</p>
+          <strong>₹999</strong> <del>₹1,999</del>
+          <span class="discount">50% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="footwear" data-name="black running shoes footwear">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80" alt="Running shoes">
+          <button class="heart-button">♡</button>
+        </div>
+        <div class="product-info">
+          <h3>Active Step</h3>
+          <p>Sports Running Shoes</p>
+          <strong>₹1,799</strong> <del>₹3,499</del>
+          <span class="discount">49% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="accessories" data-name="wrist watch accessories">
+        <div class="image-box">
+          <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" alt="Watch">
+          <button class="heart-button">♡</button>
+        </div>
+        <div class="product-info">
+          <h3>Time Wear</h3>
+          <p>Classic Wrist Watch</p>
+          <strong>₹799</strong> <del>₹1,599</del>
+          <span class="discount">50% OFF</span>
+          <button class="add-button">ADD TO BAG</button>
+        </div>
+      </article>
+
+    </div>
+
+    <p id="noProducts" class="no-products">No products found.</p>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <p class="small-heading">ABOUT STYLEZONE</p>
+      <h2>Fashion made simple.</h2>
+      <p>
+        StyleZone is a frontend fashion-shopping website project created using HTML, CSS and JavaScript.
+      </p>
+    </div>
+
+    <div class="about-boxes">
+      <div><strong>100+</strong><span>Products</span></div>
+      <div><strong>24/7</strong><span>Online Store</span></div>
+      <div><strong>100%</strong><span>Frontend Project</span></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-column">
+      <h3>ONLINE SHOPPING</h3>
+      <a href="#products">Men</a>
+      <a href="#products">Women</a>
+      <a href="#products">Footwear</a>
+      <a href="#products">Accessories</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>USEFUL LINKS</h3>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Trending Products</a>
+      <a href="#about">About Project</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>STUDENT PROJECT</h3>
+      <p>Created for learning frontend web development.</p>
+      <p>Built with HTML, CSS and JavaScript.</p>
+      <div class="tech-badge">HTML • CSS • JAVASCRIPT</div>
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> StyleZone | BTech Frontend Project
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
